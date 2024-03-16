@@ -4,7 +4,7 @@ This is a template for the [Obsidian Enhancing Export](https://github.com/mokeyi
 ### Features
  - Support for all basic Obsidian markdown
  - Title Page and Footer set from front matter. Use `assignment`, `class`, `class_desc`, `author`, and `professor`.
- - H2 headings as sections/pages. Use ampersand for unnumbered headings (ex. `## *Abstract` will be unnumbered and `## Introduction` will be numbered)
+ - H2 headings as sections/pages. Use asterick for unnumbered headings (ex. `## *Abstract` will be unnumbered and `## Introduction` will be numbered)
  - Code blocks with syntax highlighting
  - Inject raw latex with `latex` code blocks (allows for plots, `tikz` circuits, etc.)
 	 - Some latex can also be written directly in with a code block (ex. `\lipsum[1]`)
