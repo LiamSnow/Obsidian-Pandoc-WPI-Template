@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "name": "PDF"
+    },
+    {
+      "name": "Latex"
+    },
+    {
+      "name": "WPI",
+      "type": "pandoc",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${vaultDir}/${attachmentFolderPath}\" --resource-path=\"${vaultDir}/_Obsidan/Pandoc\" --resource-path=\"${pluginDir}/textemplate\" --lua-filter=\"${vaultDir}/_Obsidan/Pandoc/wpi.lua\" --template=\"${vaultDir}/_Obsidan/Pandoc/wpi.tex\" -V attachment-folder=\"${vaultDir}/${attachmentFolderPath}\" -s -o \"${outputPath}\" -t pdf",
+      "customArguments": "--pdf-engine=pdflatex",
+      "optionsMeta": {
+        "textemplate": "preset:textemplate"
+      },
+      "extension": ".pdf"
+    },
+    {
+      "name": "WPI Latex",
+      "type": "pandoc",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${vaultDir}/${attachmentFolderPath}\" --resource-path=\"${vaultDir}/_Obsidan/Pandoc\" --resource-path=\"${pluginDir}/textemplate\" --lua-filter=\"${vaultDir}/_Obsidan/Pandoc/wpi.lua\" --template=\"${vaultDir}/_Obsidan/Pandoc/wpi.tex\" --extract-media=\"${outputDir}\" -V attachment-folder=\"${vaultDir}/${attachmentFolderPath}\" -s -o \"${outputPath}\" -t latex",
+      "customArguments": "",
+      "optionsMeta": {
+        "textemplate": "preset:textemplate"
+      },
+      "extension": ".tex"
+    },
+    {
+      "name": "Markdown"
+    },
+    {
+      "name": "Markdown (Hugo)"
+    },
+    {
+      "name": "Html"
+    },
+    {
+      "name": "TextBundle"
+    },
+    {
+      "name": "Typst"
+    },
+    {
+      "name": "Word (.docx)"
+    },
+    {
+      "name": "OpenOffice"
+    },
+    {
+      "name": "RTF"
+    },
+    {
+      "name": "Epub"
+    },
+    {
+      "name": "Media Wiki"
+    },
+    {
+      "name": "reStructuredText"
+    },
+    {
+      "name": "Textile"
+    },
+    {
+      "name": "OPML"
+    },
+    {
+      "name": "Bibliography"
+    }
+  ],
+  "defaultExportDirectoryMode": "Custom",
+  "openExportedFile": false,
+  "env": {},
+  "showExportProgressBar": false,
+  "lastExportDirectory": {
+    "win32": "C:\\Users\\liams\\Downloads"
+  },
+  "lastExportType": "WPI",
+  "customDefaultExportDirectory": {
+    "win32": "C:\\Users\\liams\\Downloads"
+  },
+  "lastEditName": "WPI"
+}
