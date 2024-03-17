@@ -1,5 +1,5 @@
 ## Obsidian Pandoc WPI Template
-This is a template for the [Obsidian Enhancing Export](https://github.com/mokeyish/obsidian-enhancing-export/tree/main), a plugin for [Obsidian](https://obsidian.md/). It exports Obsidian markdown files to very professional Latex PDF files.
+This is a template for [Obsidian Enhancing Export](https://github.com/mokeyish/obsidian-enhancing-export/tree/main), a plugin for [Obsidian](https://obsidian.md/). It exports Obsidian markdown files to very professional Latex PDF files.
 
 ### Features
  - Support for all basic Obsidian markdown
