@@ -13,7 +13,16 @@ function Header(el)
         end
     elseif el.level == 4 then
         -- H4
-        return pandoc.RawBlock('latex', '\\subsection{' .. pandoc.utils.stringify(el.content) .. '}')
+        if el.content[1].text:sub(1, 1) == "*" then
+            -- Unnumbered Subsections
+            el.content[1].text = el.content[1].text:sub(2)
+            return pandoc.RawBlock('latex',
+                '\\subsection*{' .. pandoc.utils.stringify(el.content) .. '}\n\\addcontentsline{toc}{subsection}{' ..
+                    pandoc.utils.stringify(el.content) .. '}')
+        else
+            -- Numbered Subsections
+            return pandoc.RawBlock('latex', '\\subsection{' .. pandoc.utils.stringify(el.content) .. '}')
+        end
     else
         -- Other
         return el
