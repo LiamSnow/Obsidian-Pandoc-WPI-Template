@@ -1,21 +1,29 @@
+isCurrentSectionUnnumbered = false
+
 function Header(el)
+    hasAsterick = el.content[1].text:sub(1, 1) == "*"
+
     if el.level == 2 then
         -- H2
-        if el.content[1].text:sub(1, 1) == "*" then
+        if hasAsterick then
             -- Unnumbered Headings
             el.content[1].text = el.content[1].text:sub(2)
+            isCurrentSectionUnnumbered = true
             return pandoc.RawBlock('latex',
                 '\\newpage\n\\section*{' .. pandoc.utils.stringify(el.content) .. '}\n\\addcontentsline{toc}{section}{' ..
                     pandoc.utils.stringify(el.content) .. '}')
         else
             -- Numbered Heading
+            isCurrentSectionUnnumbered = false
             return pandoc.RawBlock('latex', '\\newpage\n\\section{' .. pandoc.utils.stringify(el.content) .. '}')
         end
     elseif el.level == 4 then
         -- H4
-        if el.content[1].text:sub(1, 1) == "*" then
+        if hasAsterick or isCurrentSectionUnnumbered then 
             -- Unnumbered Subsections
-            el.content[1].text = el.content[1].text:sub(2)
+            if hasAsterick then 
+                el.content[1].text = el.content[1].text:sub(2) -- Remove asterisk
+            end
             return pandoc.RawBlock('latex',
                 '\\subsection*{' .. pandoc.utils.stringify(el.content) .. '}\n\\addcontentsline{toc}{subsection}{' ..
                     pandoc.utils.stringify(el.content) .. '}')
