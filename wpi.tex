@@ -128,6 +128,14 @@ $endif$
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 
+% images
+\let\oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{\oldincludegraphics[width=0.5\textwidth,#1]{#2}}
+
+% disable figure placement at top of page
+\usepackage{float}
+\floatplacement{figure}{H}
+
 \usepackage{pgfpages}
 \usepackage[export]{adjustbox}
 \usepackage{graphicx}
@@ -139,7 +147,6 @@ $endif$
 \usepackage{lipsum}
 \usepackage{fancyhdr}
 \usepackage{steinmetz}
-\usepackage{float}
 
 \usepackage{pgfplots}
 \usepgfplotslibrary{groupplots}
