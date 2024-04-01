@@ -9,17 +9,19 @@
     {
       "name": "WPI",
       "type": "pandoc",
-      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${vaultDir}/${attachmentFolderPath}\" --resource-path=\"${vaultDir}/_Obsidan/Pandoc\" --resource-path=\"${pluginDir}/textemplate\" --lua-filter=\"${vaultDir}/_Obsidan/Pandoc/wpi.lua\" --template=\"${vaultDir}/_Obsidan/Pandoc/wpi.tex\" -V attachment-folder=\"${vaultDir}/${attachmentFolderPath}\" -s -o \"${outputPath}\" -t pdf",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${vaultDir}/${attachmentFolderPath}\" --resource-path=\"${vaultDir}/_Obsidian/Pandoc\" --resource-path=\"${pluginDir}/textemplate\" --lua-filter=\"${vaultDir}/_Obsidian/Pandoc/wpi.lua\" --template=\"${vaultDir}/_Obsidian/Pandoc/wpi.tex\" -V attachment-folder=\"${vaultDir}/${attachmentFolderPath}\" -s -o \"${outputPath}\" -t pdf",
       "customArguments": "--pdf-engine=pdflatex",
       "optionsMeta": {
         "textemplate": "preset:textemplate"
       },
-      "extension": ".pdf"
+      "extension": ".pdf",
+      "openExportedFileLocation": false,
+      "openExportedFile": false
     },
     {
       "name": "WPI Latex",
       "type": "pandoc",
-      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${vaultDir}/${attachmentFolderPath}\" --resource-path=\"${vaultDir}/_Obsidan/Pandoc\" --resource-path=\"${pluginDir}/textemplate\" --lua-filter=\"${vaultDir}/_Obsidan/Pandoc/wpi.lua\" --template=\"${vaultDir}/_Obsidan/Pandoc/wpi.tex\" --extract-media=\"${outputDir}\" -V attachment-folder=\"${vaultDir}/${attachmentFolderPath}\" -s -o \"${outputPath}\" -t latex",
+      "arguments": "-f ${fromFormat} --resource-path=\"${currentDir}\" --resource-path=\"${vaultDir}/${attachmentFolderPath}\" --resource-path=\"${vaultDir}/_Obsidian/Pandoc\" --resource-path=\"${pluginDir}/textemplate\" --lua-filter=\"${vaultDir}/_Obsidian/Pandoc/wpi.lua\" --template=\"${vaultDir}/_Obsidian/Pandoc/wpi.tex\" --extract-media=\"${outputDir}\" -V attachment-folder=\"${vaultDir}/${attachmentFolderPath}\" -s -o \"${outputPath}\" -t latex",
       "customArguments": "",
       "optionsMeta": {
         "textemplate": "preset:textemplate"
@@ -69,7 +71,7 @@
       "name": "Bibliography"
     }
   ],
-  "defaultExportDirectoryMode": "Custom",
+  "defaultExportDirectoryMode": "Same",
   "openExportedFile": false,
   "env": {},
   "showExportProgressBar": false,
