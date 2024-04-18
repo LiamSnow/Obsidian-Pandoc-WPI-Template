@@ -1,3 +1,7 @@
+## ARCHIVED
+**This repo is archived because I have stopped using Obsidian.**
+ - My Pandoc config has been moved to [arch-dotfiles](https://github.com/LiamSnow/arch-dotfiles/) under `.config/nvim/pandoc`
+
 ## Obsidian Pandoc WPI Template
 This is a template for [Obsidian Enhancing Export](https://github.com/mokeyish/obsidian-enhancing-export/tree/main), a plugin for [Obsidian](https://obsidian.md/). It exports Obsidian markdown files to very professional Latex PDF files.
 
